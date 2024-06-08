@@ -3,7 +3,13 @@
     "description": "A User-Focused Document Management System",
     "homepage": "https://github.com/TagStudioDev/TagStudio",
     "license": "GPL-3.0-only",
-    "notes": "will break, very alpha software :)",
+    "notes": [
+        " ",
+        ">                       ===== Will break, very alpha software :) =====",
+        "> ",
+        ">    See Documentation at: https://github.com/TagStudioDev/TagStudio/tree/main/doc",
+        " "
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/TagStudioDev/TagStudio/releases/download/v9.2.1/tagstudio_windows_x86_64.zip",
