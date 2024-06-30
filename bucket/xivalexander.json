@@ -1,20 +1,23 @@
 {
-    "version": "1.14.8.60",
-    "description": "Latency mitigation and a bunch of modding tools mixed into one giant mishmash of a program.",
-    "homepage": "https://github.com/Soreepeong/XivAlexander",
-    "license": "Apache-2.0",
-    "url": "https://github.com/Soreepeong/XivAlexander/releases/download/v1.14.8.60/XivAlexander_1_14_8_60_1a6b41c.zip",
-    "hash": "36a49cdf5fc670b25c730dd19ccb6cd46388730fc2eb5da6d1f9fef514f0413c"
-    "shortcuts": [
-        [
-            "XivAlexanderLoader64.exe",
-            "XivAlexander"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/Soreepeong/XivAlexander"
-    },
-    "autoupdate": {
-		"url": "https://github.com/Soreepeong/XivAlexander/releases/download/v$version/XivAlexander[a-zA-Z0-9_]*.zip"
-    }
+	"version": "1.14.8.60",
+	"description": "Latency mitigation and a bunch of modding tools mixed into one giant mishmash of a program.",
+	"homepage": "https://github.com/Soreepeong/XivAlexander",
+	"license": "Apache-2.0",
+	"architechture": {
+		"64bit": {
+			"url": "https://github.com/Soreepeong/XivAlexander/releases/download/v1.14.8.60/XivAlexander$vercommit.zip",
+			"hash": ""
+		}
+	},
+	"shortcuts": [["XivAlexanderLoader64.exe", "XivAlexander"]],
+	"checkver": {
+		"url": "https://api.github.com/repos/Soreepeong/XivAlexander/releases/latest",
+		"jsonpath": "$..browser_download_url",
+		"regex": "download/[v|V](?<version>[\\d\\.]+)/XivAlexander(?<vercommit>[\\d\\w_]+)\\.zip"
+	},
+	"autoupdate": {
+		"64bit": {
+			"url": "https://github.com/Soreepeong/XivAlexander/releases/download/v$version/XivAlexander$vercommit.zip"
+		}
+	}
 }
