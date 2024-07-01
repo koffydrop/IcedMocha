@@ -8,19 +8,25 @@
 	"architecture": {
 		"64bit": {
 			"bin": [["XivAlexanderLoader64.exe", "xivalex"]],
-			"shortcuts": [["XivAlexanderLoader64.exe", "XivAlexander"]]
+			"shortcuts": [["XivAlexanderLoader64.exe", "XivAlexander", "-a ask"]]
 		},
 		"32bit": {
 			"bin": [["XivAlexanderLoader32.exe", "xivalex32"]],
-			"shortcuts": [["XivAlexanderLoader32.exe", "XivAlexander32"]]
+			"shortcuts": [["XivAlexanderLoader32.exe", "XivAlexander32", "-a ask"]]
 		}
 	},
-	"pre_install": "if (!(Test-Path \"$persist_dir\\config.runtime.json\")){ Add-Content \"$dir\\config.runtime.json\" '' }",
+    "extract_to": "config",
+	"pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config\\config.runtime.json\")){ Add-Content \"$dir\\config\\config.runtime.json\" \"{`n`t`n}\" }",
+        "if (!(Test-Path \"$persist_dir\\config.xivalexinit.json\")){",
+        "    \"{`n`t`\"FixedConfigurationFolderPath`\": `\".\\\\config`\",`n`t`\"XivAlexFolderPath`\": `\".`\"`n}\" > $dir\\config.xivalexinit.json",
+        "}",
+        "Remove-Item $dir\\config\\config.xivalexinit.json",
+        "Move-Item \"$dir\\config\\*.exe\",\"$dir\\config\\*.dll\",\"$dir\\config\\*.cer\" \"$dir\""
+    ],
 	"persist": [
-		"ExcelTransformConfig",
-		"FontConfig",
-		"MusicImportConfig",
-		"config.runtime.json"
+		"config.xivalexinit.json",
+		"config"
 	],
 	"checkver": {
 		"url": "https://api.github.com/repos/Soreepeong/XivAlexander/releases/latest",
