@@ -1,0 +1,21 @@
+{
+    "version": "1.1.3",
+    "description": "Lightweight and customisable shim executable for Windows written in safe modern C++ 20.",
+    "homepage": "https://github.com/aloneguid/win-shim",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/aloneguid/win-shim/releases/download/1.1.3/shmake.zip",
+            "hash": "0a43272021742563422069de359d821f27c86689c8d1d10f83064ab95dd12f98"
+        }
+    },
+    "bin": "shmake.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/aloneguid/win-shim/releases/download/$version/shmake.zip"
+            }
+        }
+    }
+}
