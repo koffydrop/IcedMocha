@@ -5,13 +5,6 @@
     "license": "Apache-2.0",
     "url": "https://github.com/Soreepeong/XivAlexander/releases/download/v1.14.8.60/XivAlexander_1_14_8_60_1a6b41c.zip",
     "hash": "294ff21ef2eb19be193fb47cad0218a06099fc9c7e88186ef25b1bcacdcfa6c3",
-    "pre_install": "if (!(Test-Path \"$persist_dir\\config.runtime.json\")){ Add-Content \"$dir\\config.runtime.json\" '' }",
-    "persist": [
-        "ExcelTransformConfig",
-        "FontConfig",
-        "MusicImportConfig",
-        "config.runtime.json"
-    ],
     "architecture": {
         "64bit": {
             "bin": [
@@ -42,6 +35,13 @@
             "shortcuts": [["XivAlexanderLoader32.exe","XivAlexander32"]],
         }
     },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.runtime.json\")){ Add-Content \"$dir\\config.runtime.json\" '' }",
+    "persist": [
+        "ExcelTransformConfig",
+        "FontConfig",
+        "MusicImportConfig",
+        "config.runtime.json"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/Soreepeong/XivAlexander/releases/latest",
         "jsonpath": "$..browser_download_url",
