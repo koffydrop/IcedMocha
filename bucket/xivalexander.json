@@ -1,22 +1,44 @@
 {
-	"version": "1.14.8.60",
-	"description": "Latency mitigation and a bunch of modding tools mixed into one giant mishmash of a program.",
-	"homepage": "https://github.com/Soreepeong/XivAlexander",
-	"license": "Apache-2.0",
-	"url": "https://github.com/Soreepeong/XivAlexander/releases/download/v1.14.8.60/XivAlexander_1_14_8_60_1a6b41c.zip",
-	"hash": "294ff21ef2eb19be193fb47cad0218a06099fc9c7e88186ef25b1bcacdcfa6c3",
-	"architecture": {
-		"64bit": {
-			"bin": [["XivAlexanderLoader64.exe", "xivalex"]],
-			"shortcuts": [["XivAlexanderLoader64.exe", "XivAlexander", "-a ask"]]
-		},
-		"32bit": {
-			"bin": [["XivAlexanderLoader32.exe", "xivalex32"]],
-			"shortcuts": [["XivAlexanderLoader32.exe", "XivAlexander32", "-a ask"]]
-		}
-	},
+    "version": "1.14.8.60",
+    "description": "Latency mitigation and a bunch of modding tools mixed into one giant mishmash of a program.",
+    "homepage": "https://github.com/Soreepeong/XivAlexander",
+    "license": "Apache-2.0",
+    "url": "https://github.com/Soreepeong/XivAlexander/releases/download/v1.14.8.60/XivAlexander_1_14_8_60_1a6b41c.zip",
+    "hash": "294ff21ef2eb19be193fb47cad0218a06099fc9c7e88186ef25b1bcacdcfa6c3",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "XivAlexanderLoader64.exe",
+                    "xivalex"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "XivAlexanderLoader64.exe",
+                    "XivAlexander",
+                    "-a ask"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "XivAlexanderLoader32.exe",
+                    "xivalex32"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "XivAlexanderLoader32.exe",
+                    "XivAlexander32",
+                    "-a ask"
+                ]
+            ]
+        }
+    },
     "extract_to": "config",
-	"pre_install": [
+    "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config\\config.runtime.json\")){ Add-Content \"$dir\\config\\config.runtime.json\" \"{`n`t`n}\" }",
         "if (!(Test-Path \"$persist_dir\\config.xivalexinit.json\")){",
         "    \"{`n`t`\"FixedConfigurationFolderPath`\": `\".\\\\config`\",`n`t`\"XivAlexFolderPath`\": `\".`\"`n}\" > $dir\\config.xivalexinit.json",
@@ -24,16 +46,16 @@
         "Remove-Item $dir\\config\\config.xivalexinit.json",
         "Move-Item \"$dir\\config\\*.exe\",\"$dir\\config\\*.dll\",\"$dir\\config\\*.cer\" \"$dir\""
     ],
-	"persist": [
-		"config.xivalexinit.json",
-		"config"
-	],
-	"checkver": {
-		"url": "https://api.github.com/repos/Soreepeong/XivAlexander/releases/latest",
-		"jsonpath": "$..browser_download_url",
-		"regex": "download/[v|V](?<version>[\\d\\.]+)/XivAlexander(?<vercommit>[\\d\\w_]+)\\.zip"
-	},
-	"autoupdate": {
-		"url": "https://github.com/Soreepeong/XivAlexander/releases/download/v$version/XivAlexander$matchVercommit.zip"
-	}
+    "persist": [
+        "config.xivalexinit.json",
+        "config"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Soreepeong/XivAlexander/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/[v|V](?<version>[\\d\\.]+)/XivAlexander(?<vercommit>[\\d\\w_]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Soreepeong/XivAlexander/releases/download/v$version/XivAlexander$matchVercommit.zip"
+    }
 }
