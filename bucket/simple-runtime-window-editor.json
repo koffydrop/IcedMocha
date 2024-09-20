@@ -1,0 +1,23 @@
+{
+    "version": "2.3.3",
+    "description": "Simple Runtime Window Editor",
+    "homepage": "https://github.com/dtgDTGdtg/SRWE",
+    "license": "MIT",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/dtgDTGdtg/SRWE/releases/download/SRWE_v236/SRWE_236.zip",
+            "hash": "13acae9be695801540913d7c1b0e3c35f92f07727defbfaf04da21f0f0e07250"
+        }
+    },
+    "shortcuts": [
+        [
+            "SWRE",
+            "SWRE.exe"
+        ]
+    ],
+    "env_add_path": [
+        "",
+        ""
+    ],
+    "persist": "SRWE.exe.config"
+}
