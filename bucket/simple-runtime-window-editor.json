@@ -13,6 +13,6 @@
             "hash": "13acae9be695801540913d7c1b0e3c35f92f07727defbfaf04da21f0f0e07250"
         }
     },
-    "shortcuts": [["SWRE.exe", "SWRE"]],
+    "shortcuts": [["SRWE.exe", "SRWE"]],
     "persist": "SRWE.exe.config"
 }
