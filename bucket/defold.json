@@ -1,31 +1,31 @@
 {
-  "version": "1.9.4",
-  "description": "Defold is a completely free to use game engine for development of desktop, mobile and web games.",
-  "homepage": "https://www.defold.com",
-  "license": "https://defold.com/license",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/defold/defold/releases/download/1.9.4/Defold-x86_64-win32.zip",
-      "hash": "3860897fd26866ec3184fe3fa19dae1770e57245ab11f62f1ee665f07d88f6e5"
-    }
-  },
-  "extract_dir": "Defold",
-  "shortcuts": [
-    [
-      "Defold.exe",
-      "Defold"
-    ]
-  ],
-  "checkver": {
-    "url": "https://api.github.com/repos/defold/defold/tags",
-    "jsonpath": "$[1:].name",
-    "regex": "([\\d.]+)\""
-  },
-  "autoupdate": {
+    "version": "1.9.5",
+    "description": "Defold is a completely free to use game engine for development of desktop, mobile and web games.",
+    "homepage": "https://www.defold.com",
+    "license": "https://defold.com/license",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/defold/defold/releases/download/$version/Defold-x86_64-win32.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/defold/defold/releases/download/1.9.5/Defold-x86_64-win32.zip",
+            "hash": "672cd201632a89cfd60ac6ef9733a0df5a5e6a491414caa9997555bfcb9b8c2f"
+        }
+    },
+    "extract_dir": "Defold",
+    "shortcuts": [
+        [
+            "Defold.exe",
+            "Defold"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/defold/defold/tags",
+        "jsonpath": "$[1:].name",
+        "regex": "([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/defold/defold/releases/download/$version/Defold-x86_64-win32.zip"
+            }
+        }
     }
-  }
 }
