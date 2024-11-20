@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/defold/defold/releases/download/1.9.5/Defold-x86_64-win32.zip",
-            "hash": "672cd201632a89cfd60ac6ef9733a0df5a5e6a491414caa9997555bfcb9b8c2f"
+            "hash": "839e4e314ba184be489f4bcca31f0f5dd70362fe7681917a29fd3c5c2c08a1e3"
         }
     },
     "extract_dir": "Defold",
