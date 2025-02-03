@@ -1,12 +1,12 @@
 {
-    "version": "1.9.6",
+    "version": "1.9.7",
     "description": "Defold is a completely free to use game engine for development of desktop, mobile and web games.",
     "homepage": "https://www.defold.com",
     "license": "https://defold.com/license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/defold/defold/releases/download/1.9.6/Defold-x86_64-win32.zip",
-            "hash": "ba21b4800cdab69dde19b3613e676b08a937f8f88fd4c0fca0046abb728143bc"
+            "url": "https://github.com/defold/defold/releases/download/1.9.7/Defold-x86_64-win32.zip",
+            "hash": "1aeec0f4f37c09e737abc78b2bdbabf0672b012931254740057f1874d33dde49"
         }
     },
     "extract_dir": "Defold",
