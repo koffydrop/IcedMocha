@@ -1,5 +1,5 @@
 {
-    "version": "9.5.1",
+    "version": "9.5.2",
     "description": "A User-Focused Document Management System",
     "homepage": "https://github.com/TagStudioDev/TagStudio",
     "license": "GPL-3.0-only",
@@ -12,8 +12,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TagStudioDev/TagStudio/releases/download/v9.5.1/tagstudio_windows_x86_64.zip",
-            "hash": "9879ba90126021c49899881469193eb6e56b61dedb68373c8c31a59b849f3e86"
+            "url": "https://github.com/TagStudioDev/TagStudio/releases/download/v9.5.2/tagstudio_windows_x86_64.zip",
+            "hash": "b44970457e52e907d37d7a73e0ce8828d8159bc19f9f7728a5d9f8f12ae64936"
         }
     },
     "extract_dir": "TagStudio",
